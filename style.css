@@ -1,1 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff;
+    color: #222;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #e63962;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #e63962;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background:
+        radial-gradient(circle at top, #ffe8ef, transparent 40%),
+        #fff;
+}
+
+.coracoes {
+    color: #e63962;
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+.pequeno,
+.titulo-pequeno {
+    letter-spacing: 4px;
+    font-size: 11px;
+    color: #e63962;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 10vw, 120px);
+    margin: 15px 0;
+    font-weight: 700;
+}
+
+.hero h1 span {
+    color: #e63962;
+}
+
+.data {
+    font-size: 18px;
+    letter-spacing: 8px;
+}
+
+.descricao {
+    margin-top: 25px;
+    line-height: 1.7;
+    color: #666;
+}
+
+.contador {
+    display: flex;
+    gap: 15px;
+    margin: 40px 0;
+}
+
+.contador div {
+    width: 90px;
+    padding: 18px 10px;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.contador strong {
+    display: block;
+    font-size: 28px;
+}
+
+.contador small {
+    color: #888;
+}
+
+.botao {
+    padding: 15px 25px;
+    border-radius: 30px;
+    background: #e63962;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    transform: translateY(-3px);
+}
+
+.secao {
+    padding: 120px 10%;
+    text-align: center;
+}
+
+.secao h2 {
+    font-size: 45px;
+    margin: 15px 0;
+}
+
+.subtitulo {
+    color: #777;
+    max-width: 600px;
+    margin: auto;
+    line-height: 1.7;
+}
+
+.timeline {
+    max-width: 750px;
+    margin: 70px auto;
+    text-align: left;
+}
+
+.momento {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 45px;
+}
+
+.bolinha {
+    min-width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #e63962;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    padding: 25px;
+    border-radius: 20px;
+    background: #fafafa;
+    flex: 1;
+}
+
+.card span {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #e63962;
+}
+
+.card h3 {
+    margin: 10px 0;
+}
+
+.card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.escura {
+    background: #171717;
+    color: white;
+}
+
+.escura .subtitulo {
+    color: #aaa;
+}
+
+.musicas {
+    max-width: 700px;
+    margin: 50px auto;
+}
+
+.musica {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    margin: 15px 0;
+    background: #242424;
+    border-radius: 15px;
+    text-align: left;
+}
+
+.icone {
+    font-size: 30px;
+}
+
+.musica p {
+    color: #aaa;
+    margin-top: 5px;
+}
+
+.futuro-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 60px auto;
+}
+
+.futuro-card {
+    padding: 35px 20px;
+    border-radius: 20px;
+    background: #fafafa;
+}
+
+.futuro-card span {
+    font-size: 40px;
+}
+
+.futuro-card h3 {
+    margin: 15px 0 8px;
+}
+
+.futuro-card p {
+    color: #777;
+}
+
+footer {
+    padding: 50px;
+    text-align: center;
+    background: #fafafa;
+}
+
+footer p {
+    margin: 10px 0;
+    color: #777;
+}
+
+footer small {
+    color: #aaa;
+}
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 15px 5%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .contador {
+        gap: 5px;
+    }
+
+    .contador div {
+        width: 70px;
+        padding: 15px 5px;
+    }
+
+    .contador strong {
+        font-size: 22px;
+    }
+
+    .secao h2 {
+        font-size: 34px;
+    }
+
+    .futuro-grid {
+        grid-template-columns: 1fr;
+    }
+}
